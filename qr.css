@@ -1,0 +1,86 @@
+/* style.css */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #e0f2f7; /* Light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent scroll on mobile */
+}
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    max-width: 90vw; /* Responsive width */
+    width: 500px; /* Max width for desktop */
+    box-sizing: border-box;
+}
+canvas {
+    border: 2px solid #a7d9f2; /* Icy blue border */
+    background-color: #f0f8ff; /* Off-white for path */
+    display: block;
+    border-radius: 0.5rem;
+    touch-action: none; /* Prevent default touch actions like scrolling/zooming */
+    width: 100%; /* Make canvas responsive */
+    height: auto; /* Maintain aspect ratio */
+}
+.controls {
+    display: grid;
+    grid-template-areas:
+        ". up ."
+        "left . right"
+        ". down .";
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    width: 200px; /* Fixed width for controls for better touch targets */
+    max-width: 100%;
+}
+.control-button {
+    background-color: #007bff; /* Blue button */
+    color: white;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    user-select: none; /* Prevent text selection */
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: none; /* Remove default button border */
+}
+.control-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+.control-button:active {
+    transform: translateY(2px); /* Press effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+#up { grid-area: up; }
+#down { grid-area: down; }
+#left { grid-area: left; }
+#right { grid-area: right; }
+
+.message-box {
+    background-color: #d4edda; /* Light green for success */
+    color: #155724; /* Dark green text */
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    text-align: center;
+    font-weight: bold;
+    display: none; /* Hidden by default */
+    width: 100%;
+    box-sizing: border-box;
+}
+.message-box.show {
+    display: block;
+}

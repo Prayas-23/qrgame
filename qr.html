@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polar Bear Maze</title>
+    <!-- Tailwind CSS CDN for easy styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <h1 class="text-3xl font-bold text-gray-800 mb-4">Can you help the polar bear reach its home before the ice melts?</h1>
+        <canvas id="mazeCanvas"></canvas>
+        <div class="message-box" id="messageBox"></div>
+        <div class="controls">
+            <button id="up" class="control-button">&#9650;</button> <!-- Up arrow -->
+            <button id="left" class="control-button">&#9664;</button> <!-- Left arrow -->
+            <button id="right" class="control-button">&#9654;</button> <!-- Right arrow -->
+            <button id="down" class="control-button">&#9660;</button> <!-- Down arrow -->
+        </div>
+    </div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
